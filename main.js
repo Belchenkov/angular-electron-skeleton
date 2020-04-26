@@ -4,7 +4,13 @@ let win;
 
 function createWindow() {
   win = new BrowserWindow({ width: 800, height: 600 });
-  win.loadURL(`http://localhost:4200`);
+
+  if (process.env.DEBUG) {
+    win.loadURL(`http://localhost:4200`);
+  } else {
+    win.loadURL(`file://${__dirname}/dist/integrate-angular/index.html`);
+  }
+
   win.on('closed', () => {
     win = null;
   });
