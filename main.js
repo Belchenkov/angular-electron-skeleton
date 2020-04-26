@@ -4,7 +4,7 @@ let win;
 
 function createWindow() {
   win = new BrowserWindow({ width: 800, height: 600 });
-  win.loadURL(`file://${__dirname}/dist/integrate-angular/index.html`);
+  win.loadURL(`http://localhost:4200`);
   win.on('closed', () => {
     win = null;
   });
