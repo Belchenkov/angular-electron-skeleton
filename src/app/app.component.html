@@ -1,7 +1,9 @@
 <mat-toolbar color="primary">
-  <span>My Application</span>
+  <button mat-button routerLink="/">My Application</button>
+  <span class="spacer"></span>
+  <button mat-icon-button routerLink="/about">
+    <mat-icon>help_outline</mat-icon>
+  </button>
 </mat-toolbar>
-<div style="text-align:center">
-  <h1>Welcome to {{ title }}!</h1>
-</div>
+
 <router-outlet></router-outlet>
